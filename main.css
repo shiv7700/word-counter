@@ -1,0 +1,61 @@
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: cursive;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body > h2 {
+  margin-left: 5%;
+}
+
+.custom,
+.opt {
+  margin-top: 20px;
+}
+
+.header {
+  background-color: lightcoral;
+  padding: 20px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+textarea {
+  height: 300px;
+  width: 90%;
+  resize: none;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.text-area,
+.result,
+.options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+label {
+  margin: auto;
+}
+
+button,
+select {
+  padding: 4px;
+  font-family: cursive;
+  border-radius: 6%;
+  cursor: pointer;
+}
+
+.result {
+  margin-top: 30px;
+}
