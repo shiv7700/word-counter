@@ -59,3 +59,12 @@ select {
 .result {
   margin-top: 30px;
 }
+
+@media only screen and (max-width: 800px) {
+  body {
+    font-family: "Montserrat Alternates", "sans-serif";
+  }
+  .options {
+    flex-direction: column;
+  }
+}
