@@ -1,5 +1,6 @@
 // output div
 const result = document.querySelector(".result");
+const color = document.querySelector(".color");
 // const textArea = document.querySelector("textarea");
 // const option = document.querySelector(".option");
 
@@ -18,6 +19,7 @@ rest.addEventListener("click", () => {
   textArea.style.fontStyle = "normal";
   textArea.style.textDecorationLine = "none";
   textArea.style.fontSize = "";
+  textArea.style.color = "black";
   result.innerHTML = "<h2> everything is rest </h2>";
 });
 
@@ -42,7 +44,6 @@ words.addEventListener("click", () => {
 
 italic.addEventListener("click", () => {
   const textArea = document.querySelector("textarea");
-  console.log(textArea.style.fontStyle);
   if (textArea.style.fontStyle === "") {
     textArea.style.fontStyle = "italic";
   } else if (textArea.style.fontStyle === "italic") {
@@ -54,7 +55,6 @@ italic.addEventListener("click", () => {
 
 underline.addEventListener("click", () => {
   const textArea = document.querySelector("textarea");
-  console.log(textArea.style.textDecorationLine);
   if (textArea.style.textDecorationLine === "") {
     textArea.style.textDecorationLine = "underline";
   } else if (textArea.style.textDecorationLine === "underline") {
@@ -69,4 +69,10 @@ font.addEventListener("click", () => {
   const option = document.querySelector(".option");
   let selectedIndex = option.selectedIndex;
   textArea.style.fontSize = option[selectedIndex].value;
+});
+
+color.addEventListener("click", () => {
+  const textArea = document.querySelector("textarea");
+  const colorPicker = document.querySelector(".color-picker");
+  textArea.style.color = colorPicker.value;
 });
