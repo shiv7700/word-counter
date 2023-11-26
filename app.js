@@ -11,6 +11,7 @@ const italic = document.querySelector(".italic");
 const underline = document.querySelector(".underline");
 const font = document.querySelector(".font");
 const bold = document.querySelector(".bold");
+const spellCheck = document.querySelector(".spellcheck");
 
 rest.addEventListener("click", () => {
   const textArea = document.querySelector("textarea");
@@ -75,4 +76,13 @@ color.addEventListener("click", () => {
   const textArea = document.querySelector("textarea");
   const colorPicker = document.querySelector(".color-picker");
   textArea.style.color = colorPicker.value;
+});
+
+spellCheck.addEventListener("click", () => {
+  const textArea = document.querySelector("textarea");
+  if (textArea.getAttribute("spellcheck") === "false") {
+    textArea.setAttribute("spellcheck", true);
+  } else {
+    textArea.setAttribute("spellcheck", false);
+  }
 });
